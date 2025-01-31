@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panika SOS Mail</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      .wrapper {
+        width: 100%;
+        background-color: rgb(44, 44, 44);
+        padding-bottom: 50px;
+      }
+
+      .main {
+        background-color: rgb(56, 56, 56);
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+        border-spacing: 0;
+        color: #d6d6d6;
+        padding: 30px 50px;
+      }
+
+      .header,
+      .footer {
+        background-color: #171a1b;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      .header img,
+      .footer img {
+        width: 100px;
+      }
+
+      .header h1 {
+        color: #ffffff;
+      }
+
+      .header p,
+      .footer p {
+        color: #ffffff;
+        margin: 10px 0;
+      }
+
+      .header h2,
+      .footer h2 {
+        color: #ffffff;
+        margin: 10px 0;
+      }
+
+      .content {
+        text-align: justify;
+        color: white;
+      }
+
+      .content h1 {
+        margin-bottom: 20px;
+      }
+
+      .content p {
+        margin-bottom: 20px;
+      }
+
+      .btn-container {
+        text-align: center;
+      }
+
+      .content .btn {
+        display: inline-block;
+        text-decoration: none;
+        letter-spacing: 1px;
+        padding: 10px 20px;
+        border: 3px solid red;
+        border-radius: 20px;
+        color: white;
+        transition: all 0.6s ease;
+        position: relative;
+      }
+
+      .content .btn::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: -100%;
+        background-color: red;
+        transition: all 0.6s ease;
+        border-radius: 50%;
+        z-index: -1;
+      }
+
+      .content .btn:hover::before {
+        top: 0;
+        border-radius: 0;
+      }
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        text-decoration: dashed;
+        letter-spacing: 5px;
+        padding: 10px 50px;
+        transition: all 0.6s ease;
+      }
+
+      .btn-ubication {
+        color: white;
+      }
+      .btn-ubication {
+        color: white;
+      }
+
+      .btn-2 {
+        border: 3px solid;
+        border-radius: 20px;
+      }
+
+      .btn-2:hover {
+        background-color: #333333;
+        box-shadow: 0 0 20px var(--color);
+        border-color: var(--color);
+      }
+
+      .disclaimer {
+        font-size: 12px;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px;
+        background-color: #171a1b;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <h1>Panika SOS</h1>
+      </div>
+      <div class="main">
+        <div class="content">
+          <div>
+            <h1>
+              Buenas, contacto de emergencia de {first_name_user}
+              {last_name_user}
+            </h1>
+
+            <th>
+              <p>Hola {contact_firstname_user} {contact_lastname_user},</p>
+              <p>
+                Te hablamos de PanikaSOS. El usuario {first_name_user}
+                {last_name_user} te ha asignado como un contacto de confianza,
+                por lo que recibirás la ubicación y los datos importantes de
+                él/ella:
+              </p>
+            </th>
+          </div>
+
+          <ul>
+            <li>Email: {email_user}</li>
+            <li>Número telefónico: {phone_number_user}</li>
+          </ul>
+          <p>
+            Mediante este boton podrás acceder a la ubicación actial de
+            {first_name_user}:
+          </p>
+          <div class="btn-container">
+            <a href="{ubication_user}" class="btn btn-ubication btn-2"
+              >Ubicación
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <h2>Datos</h2>
+        <p>Panika SOS</p>
+        <p>msospanika@gmail.com</p>
+        <p>246 493 4066</p>
+      </div>
+      <div class="disclaimer">
+        La información contenida en este correo electrónico y sus anexos es
+        CONFIDENCIAL. Está destinada exclusivamente al individuo o entidad a
+        quien va dirigido y puede contener información no pública. Si ha
+        recibido este correo por error o si usted no es el destinatario
+        previsto, por favor notifíquelo al remitente de inmediato y elimine este
+        mensaje de su sistema. Cualquier uso, distribución o reproducción de
+        este correo por parte de personas no autorizadas está estrictamente
+        prohibido.
+      </div>
+    </div>
+  </body>
+</html>
